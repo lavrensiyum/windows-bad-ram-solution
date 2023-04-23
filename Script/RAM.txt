@@ -1,0 +1,6 @@
+##########
+Writed below RAM address just a example of what we needed. Before the run script, clear everything!
+
+16E293838
+408AD82F8
+##########
