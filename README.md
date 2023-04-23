@@ -52,7 +52,7 @@ Click "Write" button and follow the instructions.
 
 When its done, dont worry if you cant see your USB drivers on Windows Explorer.
 
-[image](./pictures/image1.png)
+[image](https://raw.githubusercontent.com/lavrensiyum/windows-bad-ram-solution/blob/main/pictures/image1.png)
 
 
 ___
@@ -84,7 +84,7 @@ When you copy spesific word, you just holding left button and take to the ending
 
 https://codesandbox.io // for online text* editor
 
-[image](./pictures/image3.png)
+[image](https://raw.githubusercontent.com/lavrensiyum/windows-bad-ram-solution/blob/main/pictures/image3.png)
 
 Take a look at the results and find something like:
 
@@ -99,7 +99,7 @@ Copy all the Bad Memory Address and paste the "BadMemory.txt address. If you doi
 
 After we coppyed all the bad memory addres on result file, it will look like:
 
-[image](./pictures/image4.png)
+[image](https://raw.githubusercontent.com/lavrensiyum/windows-bad-ram-solution/main/pictures/image4.png)
 
 When we finished, go to the next section.
 ___
