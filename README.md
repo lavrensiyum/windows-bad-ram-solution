@@ -1,6 +1,6 @@
 # Blocking Bad Memory (RAM) Sectors on Windows
 
-## Why i'm needed that?
+## Why do I need this?
 If you have a problem as written in the section below, don't hesitate to check your RAM. And if you have a solid (soldered to the motherboard) notebook RAM like me, it's a good chance to get rid of the hole motherboard service charges (it saved me up to 10K TL/500 USD!).
 ## How can i know to need this solution?
 
@@ -28,13 +28,13 @@ We are planning below steps
 1. Burn MemTest86 to our USB.
 2. Running USB with Boot Menu mode to our PC.
 3. Investigate the result.
-4. Block Bad Memory with BadMemory.txt file
+4. Block Bad Memory with RAM.txt file
 
 After that, we will repeat steps [2-4] until we are satisfied with step [4].
 
 Let's get started
 ___
-## Step 1. Burn MemTest86 to our USB with Rufus.
+## Step 1. Burn MemTest86 to our USB.
 
 Go to https://www.memtest86.com/download.htm adress and click "Download MemTest86 Free (Version ??.? Build ?????)"
 
@@ -52,8 +52,7 @@ Click "Write" button and follow the instructions.
 
 When its done, dont worry if you cant see your USB drivers on Windows Explorer.
 
-[image](https://raw.githubusercontent.com/lavrensiyum/windows-bad-ram-solution/blob/main/pictures/image1.png)
-
+<img src="pictures/image1.png"/>
 
 ___
 
@@ -80,11 +79,12 @@ Open the USB file on Windows and search `MemTest86-`. You will find a .txt file 
 
 Now, you has to copy all the whole txt and paste the online text/code editor or VS Code (because some web sites and VSCode have a middle mouse button feature to easy to copy spesific area.).
 
+<img src="pictures/image3.png"/>
+
 When you copy spesific word, you just holding left button and take to the ending words right? For now, you can just hold the middle mouse buttons (wheel) and drag to all needed ram address.
 
 https://codesandbox.io // for online text* editor
 
-[image](https://raw.githubusercontent.com/lavrensiyum/windows-bad-ram-solution/blob/main/pictures/image3.png)
 
 Take a look at the results and find something like:
 
@@ -93,30 +93,28 @@ Take a look at the results and find something like:
 ```
 In easy way, [CTRL + F] ==> "Address" seach and find the all what we need.
 
-Go to Desktop and create a file "BadMemory.txt" and open it.
+Go to Desktop and create a file "RAM.txt" and open it.
 
-Copy all the Bad Memory Address and paste the "BadMemory.txt address. If you doing that secondly, delete the before you writted the bad memory addres because that you already banned!
+Copy all the Bad Memory Address and paste the "RAM.txt" address. If you doing that secondly, delete the before you writted the bad memory addres because that you already banned!
 
-After we coppyed all the bad memory addres on result file, it will look like:
+After we coppyed all the bad memory addres on result file (RAM.txt), it will look like:
 
-[image](https://raw.githubusercontent.com/lavrensiyum/windows-bad-ram-solution/main/pictures/image4.png)
+<img src="pictures/image4.png"/>
 
 When we finished, go to the next section.
 ___
 
-## Step 4. Block Bad Memory with BadMemory.txt file
+## Step 4. Block Bad Memory with RAM.txt file
 
-Now, copy the script (script.py or script.exe) on the same direction to "BadMemory.txt" (it will Desktop).
+Now, copy the script (script.py or script.exe) on the same direction to "RAM.txt" (it will Desktop).
 
-Run the script and wait the script take the every address and ban.
+Run the script and wait for the script to retrieve and ban each address.
 
 When it finished, you can go the next section.
 ___
 
 MemTest can't write the all bad memory addres to first time (only the first part because of the limit). Because that, we are goint to repeat Step 2-4 sections. If you do that correctly, the MemTest will find less bad memory address every time (and one time it goes to 0!).
-
-
-
+___
 
 ## Then?
 In my research, some users writted that banning method can cause the unboot Windows. So be carefully, i dont have give you to guarentee!
@@ -126,11 +124,11 @@ In my computer, i have banned 600+ address and its work perfecly fine (in 4 mont
 If you can change the ram stick, that will awsome but other way (like my motherboard-solid ram) you can try it.
 
 That method will be break down if you format your Windows or update the Windows.
-
+___
 
 ## The script.py or script.exe is safe? How it is work?
 
-The script.py taking every line on RAM.txt text files and sending CMD (bcdedit /set {badmemory} badmemorylist 0x*********). The script is working with Python 3.8 version and using pre-loaded lib named "os".
+The script.py taking every line on RAM.txt text files and sending CMD (bcdedit /set {badmemory} badmemorylist 0x*********). The script is tested with Python 3.8 version.
 
 If you want to run Python script without Python installed PC, you can run script.exe.
 
@@ -143,4 +141,4 @@ If you want to compile script.py to .exe, run this command
 4. Done!
 
 ## Thanks!
-This is my first guide on GitHub so if you see any "unusual" things like grammer or technic problem, feel free to contact me on Discord (yildiz 0001)!
+This is my first guide on GitHub so if you see any "unusual" things like grammer or technic problem, feel free to contact me on Discord (yildiz/0001)!
